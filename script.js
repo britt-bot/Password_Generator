@@ -1,97 +1,98 @@
-// Assignment Code
-const generateBtn = document.querySelector("#generate");
-const minPassLength = 8;
-const maxPassLength = 128;
+//an employee wants to randomly create a strong, secure password meeting certain criteria
 
-// Prompts after click
-function generatePassword() {
-  const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
-  const uppercaseLetters = lowercaseLetters.toUpperCase();
-  const numeric = '0123456789';
-  const specialChara = '!@#$%^&*()_+{}|:?><[]';
 
-  let passLength = prompt("Please enter length of password - Must be 8 to 128 characters.");
-  console.log(passLength);
-    if (passLength >= minPassLength && passLength <= maxPassLength) {
-      console.log(passLength);
-    } else if (passLength <= minPassLength || passLength >= maxPassLength) {
-      alert("Invalid length, please try again.");
-    };
+//User needs a new secure password
 
-  let passCharacters = confirm("Do you want to include: Lowercase?");        
-  console.log(passCharacters);
-    if (passCharacters == "lowercaseLetters") {
-      for (i = 0; i <= passLength - 1; i++) {
-        var index = Math.floor(Math.random() * criteria.lowercaseLetters.length);
-        var digit = criteria.lowercaseLetters[index];
-        console.log(digit);
-      }
+//When button is clicked to generate password 
+
+// Then prompt for the user to choose length & length criteria (8-128 characters) pops up
+var length = prompt('Please select your number of characters.')
+if (length < 8 || length > 128) {
+    alert('Error. Please select correct character length.')
+} else {
+    // Log number selected
+    console.log(length);
+    var lowercase = confirm('Would you like to include lowercase letters?') 
+    var uppercase = confirm('Would you like to include uppercase letters?')
+    var numbers = confirm('Would you like to include numbers?')
+    var special = confirm('Would you like to include special characters?')
+    console.log(lowercase, uppercase, numbers, special);
+
+    var charactersPool = ''
+    const lowerletters = 'abcdefghijklmnopqrstuvwxyz'
+    const upperletters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    const numeric = '0123456789'
+    const specChar = '!@#$%^&*()_+{}|:?><[]'
+    // if (lowercase + 
+    // let password = ['A','$','8','8','e','y','r']
+
+
+    // if user selects any/all var add to pool 
+    if (lowercase) {
+       characterPool = lowerletters
+    } 
+    if (uppercase) {
+        // characterPool = characterPool + upperletters
+        // is += written out 
+        characterPool += upperletters
     }
-  
-  let passCharacters = confirm("Do you want to include: Uppercase?");         
-  console.log(passCharacters);
-    if (passCharacters == "uppercaseLetters") {
-      for (i = 0; i <= passLength - 1; i++) {
-        var index = Math.floor(Math.random() * criteria.uppercaseLetters.length);
-        var digit = criteria.uppercaseLetters[index];
-        console.log(digit);
-      }
+    if (numbers) {
+        characterPool += numeric
     }
-
-  let passCharacters = confirm("Do you want to include: Numeric?");         
-  console.log(passCharacters);
-    if (passCharacters == "numeric") {
-      for (i = 0; i <= passLength - 1; i++) {
-        var index = Math.floor(Math.random() * criteria.numeric.length);
-        var digit = criteria.numeric[index];
-        console.log(digit);
-      }
+    if (special) {
+        characterPool += specChar
     }
+    console.log(characterPool);
+    var password = ''
+    for(var i=0; i < length; i++) {
+    //     // add selection to password randomly 
+        password += characterPool.charAt(Math.floor(Math.random() * characterPool.length));
 
-  let passCharacters = confirm("Do you want to include: Special Characters?");         
-  console.log(passCharacters);
-    if (passCharacters == "specialChara") {
-      for (i = 0; i <= passLength - 1; i++) {
-        var index = Math.floor(Math.random() * criteria.specialChara.length);
-        var digit = criteria.specialChara[index];
-        console.log(digit);
-      }
     }
+    console.log(password);
+};
+        // nestle inside else ^^^
+// When length has been selected by the user and logged
+// Then the next confirm (prompt) for the user to choose yes/no for "lowercase" letters pops up
 
-  
-  // }
-  // else if (passCharacters == "uppercase") {
-  //   for (i = 0; i <= passLength - 1; i++) {
-  //     var index = Math.floor(Math.random() * criteria.uppercase.length);
-  //     var digit = criteria.uppercase[index];
-  //     console.log(digit);
-  //   }
-  // }
-  // else if (passCharacters == "numeric") {
-  //   for (i = 0; i <= passLength - 1; i++) {
-  //     var index = Math.floor(Math.random() * criteria.numeric.length);
-  //     var digit = criteria.numeric[index];
-  //     console.log(digit);
-  //   }
-  // }
-  // else if (passCharacters == "special character") {
-  //   for (i = 0; i <= passLength - 1; i++) {
-  //     var index = Math.floor(Math.random() * criteria.specialChara.length);
-  //     var digit = criteria.specialChara[index];
-  //     console.log(digit);
-  //   }
-  // }
-  // else {
-  //   alert("Invalid password, please try again.");
-  //   prompt("Please include all of the following: \nLowercase\nUppercase\nNumeric\nSpecial Characters");
-  // }
-  // return 'Accepted!'
-}
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-}
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // When yes/no selection made by user it is logged
+//     console.log(userSelection)
+// // Then the next confirm (prompt) for the user to choose yes/no for "uppercase" letters pops up
+//     confirm('Would you like to include uppercase letters?') {
+//         if (userSelection = true) {
+//             console.log(userSelection);
+//         } else {
+//             console.log(userSelection);
+//         }
+//     }
+// // When yes/no selection made by user it is logged
+//     console.log(userSelection)
+// // Then the next confirm (prompt) for the user to choose yes/no for "numbers" pops up 
+//     confirm('Would you like to include numbers?') {
+//         if (userSelection = true) {
+//             console.log(userSelection);
+//         } else {
+//             console.log(userSelection);
+//         }
+//     }
+// // When yes/no selection made by user it is logged
+//     console.log(userSelection)
+// // Then the next confirm (prompt) for the user to choose yes/no for "special characters" pops up
+//     confirm('Would you like to include special characters?') {
+//         if (userSelection = true) {
+//             console.log(userSelection);
+//         } else {
+//             console.log(userSelection);
+//         }
+//     }
+// When yes/no selection made by user it is logged 
+//     console.log(userSelection)
+// Then user input is validated for/and at least one of the previous confirms was selected as yes/true
+//     validate data how?
+// When user input validated
+//     again how?
+// Then all of the confirm (prompt) logs are combined to create password fitting selected and required criteria
+//     console.log(passwordSolution);
+// When password generated
+// Then password is displayed on the page
+//     return passwordSolution;
