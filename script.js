@@ -6,26 +6,26 @@
 //When button is clicked to generate password 
 
 // Then prompt for the user to choose length & length criteria (8-128 characters) pops up
-var length = prompt('Please select your number of characters.')
-if (length < 8 || length > 128) {
+
+function promptUser(){
+    var length = prompt('Please select your number of characters.');
+    if (length < 8 || length > 128) {
     alert('Error. Please select correct character length.')
-} else {
+    } else {
     // Log number selected
-    console.log(length);
+    console.log(length);}
+
     var lowercase = confirm('Would you like to include lowercase letters?') 
     var uppercase = confirm('Would you like to include uppercase letters?')
     var numbers = confirm('Would you like to include numbers?')
     var special = confirm('Would you like to include special characters?')
     console.log(lowercase, uppercase, numbers, special);
 
-    var charactersPool = ''
+    var characterPool = ''
     const lowerletters = 'abcdefghijklmnopqrstuvwxyz'
     const upperletters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     const numeric = '0123456789'
     const specChar = '!@#$%^&*()_+{}|:?><[]'
-    // if (lowercase + 
-    // let password = ['A','$','8','8','e','y','r']
-
 
     // if user selects any/all var add to pool 
     if (lowercase) {
@@ -43,14 +43,17 @@ if (length < 8 || length > 128) {
         characterPool += specChar
     }
     console.log(characterPool);
+
     var password = ''
-    for(var i=0; i < length; i++) {
+    for (var i=0; i < length; i++) {
     //     // add selection to password randomly 
         password += characterPool.charAt(Math.floor(Math.random() * characterPool.length));
-
     }
-    console.log(password);
+    console.log("Here is your password: " + password);
+    alert ("Here is your password: " + password);
 };
+
+
         // nestle inside else ^^^
 // When length has been selected by the user and logged
 // Then the next confirm (prompt) for the user to choose yes/no for "lowercase" letters pops up
