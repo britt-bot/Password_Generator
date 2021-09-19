@@ -18,14 +18,14 @@ This table of contents is to make it easy for users to find what they need.
 
 Open the desired web browser and go to the page url for either the Repo or the Deployed project.
 
-[Homework 03 - Password Generator Repo](https://github.com/britt-bot/03-Password_Generator)
+[Homework 03 - Password Generator Github Repo](https://github.com/britt-bot/03-Password_Generator)
 
-[Homework 03 - Password Generator Deployed](https://britt-bot.github.io/03-Password_Generator/)
+[Homework 03 - Password Generator Github Deploy](https://britt-bot.github.io/03-Password_Generator/)
 
 
 ## Usage 
 
-A portfolio is a gathering of completed and in progress works, that are used to showcase a skilled person's end results and/or work styles.
+This app is used to generate passwords based on user input.
 
 ![Screenshot](https://user-images.githubusercontent.com/77466708/114288949-7021aa80-9a39-11eb-9302-6987aa105e69.png)
 
