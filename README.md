@@ -1,3 +1,4 @@
+![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 # 03-Password_Generator
 ## Description 
 
