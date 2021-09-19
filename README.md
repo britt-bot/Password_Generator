@@ -19,9 +19,9 @@ This table of contents is to make it easy for users to find what they need.
 
 Open the desired web browser and go to the page url for either the Repo or the Deployed project.
 
-[Homework 03 - Password Generator Github Repo](https://github.com/britt-bot/03-Password_Generator)
+[Password Generator Github Repo](https://github.com/britt-bot/03-Password_Generator)
 
-[Homework 03 - Password Generator Github Deploy](https://britt-bot.github.io/03-Password_Generator/)
+[Password Generator Github Deploy](https://britt-bot.github.io/03-Password_Generator/)
 
 
 ## Usage 
