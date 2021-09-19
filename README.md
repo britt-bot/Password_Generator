@@ -34,8 +34,8 @@ This app is used to generate passwords based on user input.
 
 A HUGE shoutout to ALL of the staff for all the help with understanding JS. 
 
-Codecademy is a HUGE MVP, too. 
-[Codecademy](https://www.codecademy.com/)
+[Codecademy](https://www.codecademy.com/) is a HUGE MVP, too. 
+
 
 
 ## License
