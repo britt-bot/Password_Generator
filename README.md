@@ -1,5 +1,5 @@
 ![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-# 03-Password_Generator
+# Password_Generator
 ## Description 
 
 This project allows the user to generate a password that is both, secure and random. The user inputs the number of characters and then selects the character types that they want to be included in their generated password.
@@ -19,9 +19,9 @@ This table of contents is to make it easy for users to find what they need.
 
 Open the desired web browser and go to the page url for either the Repo or the Deployed project.
 
-[Password Generator Github Repo](https://github.com/britt-bot/03-Password_Generator)
+[Password Generator Repo](https://github.com/britt-bot/03-Password_Generator)
 
-[Password Generator Github Deploy](https://britt-bot.github.io/03-Password_Generator/)
+[Password Generator Deploy](https://britt-bot.github.io/03-Password_Generator/)
 
 
 ## Usage 
